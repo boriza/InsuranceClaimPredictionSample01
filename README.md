@@ -7,8 +7,12 @@ https://docs.microsoft.com/en-us/azure/machine-learning/service/reference-azure-
 
 
 Attach Azure ML to the current directory. Execute this in root of the project 
+
+**_Step 1_**
 ```
 az ml folder attach -w aml -g databricks-au
+```
+```
 
 az ml folder attach [--experiment-name]
                     [--output-metadata-file]
@@ -16,15 +20,16 @@ az ml folder attach [--experiment-name]
                     [--resource-group]
                     [--subscription-id]
                     [--workspace-name]
-
-
 ```
 
 Submit current code for execusion in Azure
 
+**_Step 2_**
 ```
 az ml run submit-script -c sklearn.runconfig -e cli-test
 
+```
+```
 az ml run submit-script [--async]
                         [--conda-dependencies]
                         [--ct]
