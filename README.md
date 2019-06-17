@@ -20,21 +20,10 @@ az ml folder attach [--experiment-name]
 
 ```
 
-Get a list of available expriments in your AML workspace
-```
-az ml experiment list -w aml
-
-az ml experiment list [--output-metadata-file]
-                      [--path]
-                      [--resource-group]
-                      [--subscription-id]
-                      [--workspace-name]
-
-```
 Submit current code for execusion in Azure
 
 ```
-az ml run submit-script -c sklearn -e cli-test
+az ml run submit-script -c sklearn.runconfig -e cli-test
 
 az ml run submit-script [--async]
                         [--conda-dependencies]
